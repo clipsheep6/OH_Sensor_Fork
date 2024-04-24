@@ -28,6 +28,7 @@ const std::map<int32_t, std::string> ERROR_MESSAGES = {
     {SERVICE_EXCEPTION,  "Service exception."},
     {PERMISSION_DENIED,  "Permission denied."},
     {PARAMETER_ERROR,  "The parameter invalid."},
+    {SENSOR_NO_SUPPORT,  "The Sensor is not supported by the device."},
     {NON_SYSTEM_API,  "Non-system api."},
 };
 

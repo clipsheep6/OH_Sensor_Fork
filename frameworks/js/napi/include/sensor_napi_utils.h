@@ -52,6 +52,7 @@ bool ConvertToSensorData(const napi_env &env, sptr<AsyncCallbackInfo> asyncCallb
 bool CreateNapiArray(const napi_env &env, float *data, int32_t dataLength, napi_value &result);
 bool ConvertToSensorInfos(const napi_env &env, sptr<AsyncCallbackInfo> asyncCallbackInfo, napi_value result[2]);
 bool ConvertToSingleSensor(const napi_env &env, sptr<AsyncCallbackInfo> asyncCallbackInfo, napi_value result[2]);
+bool ConvertToSensorInfo(const napi_env &env, const SensorInfo &sensorInfo, napi_value &result);
 bool ConvertToBodyData(const napi_env &env, sptr<AsyncCallbackInfo> asyncCallbackInfo, napi_value result[2]);
 bool CreateFailMessage(CallbackDataType type, int32_t code, string message,
     sptr<AsyncCallbackInfo> &asyncCallbackInfo);

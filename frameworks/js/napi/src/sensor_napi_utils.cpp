@@ -236,7 +236,7 @@ bool getJsonObject(const napi_env &env, sptr<AsyncCallbackInfo> asyncCallbackInf
     return true;
 }
 
-bool ConvertToSensorInfo(const napi_env &env, SensorInfo sensorInfo, napi_value &result)
+bool ConvertToSensorInfo(const napi_env &env, const SensorInfo &sensorInfo, napi_value &result)
 {
     CALL_LOG_ENTER;
     CHKNRF(env, napi_create_object(env, &result), "napi_create_object");
