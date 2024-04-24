@@ -206,7 +206,7 @@ void SensorDataProcesser::SendRawData(std::unordered_map<int32_t, SensorData> &c
     if (events.empty()) {
         return;
     }
-    size_t eventSize = events.size();
+    int32_t eventSize = static_cast<int32_t>(events.size());
     auto ret = channel->SendData(events.data(), eventSize * sizeof(SensorData));
     if (ret != ERR_OK) {
         SEN_HILOGE("Send data failed, ret:%{public}d, sensorId:%{public}d, timestamp:%{public}" PRId64,
