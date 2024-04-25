@@ -1069,7 +1069,7 @@ static napi_value GetSingleSensor(napi_env env, napi_callback_info info)
             }
         }
         if (asyncCallbackInfo->sensorInfos.empty()) {
-            ThrowErr(env, PARAMETER_ERROR, "Can't find the sensorId");
+            ThrowErr(env, SENSOR_NO_SUPPORT, "Can't find the sensorId");
             return nullptr;
         }
     }
